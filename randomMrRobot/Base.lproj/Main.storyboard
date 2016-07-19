@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="randomMrRobot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mrrobot_1" translatesAutoresizingMaskIntoConstraints="NO" id="ijK-sb-xVr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-8L-Nxd">
+                                <rect key="frame" x="0.0" y="515" width="600" height="85"/>
+                                <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="randomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFG-vk-0Hg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2Vk-8L-Nxd" secondAttribute="trailing" id="0Sw-Vz-Ojg"/>
+                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8OK-xv-cnr"/>
+                            <constraint firstItem="ijK-sb-xVr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="cLQ-9h-TGa"/>
+                            <constraint firstAttribute="trailing" secondItem="ijK-sb-xVr" secondAttribute="trailing" id="fpX-iK-ILg"/>
+                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="ijK-sb-xVr" secondAttribute="bottom" constant="-85" id="my2-UF-nXs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vk-8L-Nxd" secondAttribute="bottom" id="rcc-1k-459"/>
+                            <constraint firstItem="ijK-sb-xVr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tzw-0j-WTY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ijK-sb-xVr" secondAttribute="bottom" id="zlx-Yi-xq9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="ijK-sb-xVr" id="sf2-VU-fNC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mrrobot_1" width="2560" height="1440"/>
+    </resources>
+</document>
