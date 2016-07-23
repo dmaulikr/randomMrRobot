@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,21 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mrrobot_1" translatesAutoresizingMaskIntoConstraints="NO" id="ijK-sb-xVr">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-8L-Nxd">
-                                <rect key="frame" x="0.0" y="515" width="600" height="85"/>
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
                                 <state key="normal" title="Random"/>
                                 <connections>
                                     <action selector="randomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFG-vk-0Hg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcJ-zU-FWs">
-                                <rect key="frame" x="0.0" y="20" width="600" height="495"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcJ-zU-FWs">
+                                <rect key="frame" x="40" y="40" width="520" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -39,20 +36,27 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2Vk-8L-Nxd" secondAttribute="trailing" id="0Sw-Vz-Ojg"/>
                             <constraint firstItem="xcJ-zU-FWs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6wK-pA-VIt"/>
+                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="xcJ-zU-FWs" secondAttribute="bottom" constant="20" id="6wP-Ga-xcy"/>
                             <constraint firstItem="2Vk-8L-Nxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8OK-xv-cnr"/>
-                            <constraint firstItem="ijK-sb-xVr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="cLQ-9h-TGa"/>
-                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="xcJ-zU-FWs" secondAttribute="bottom" id="cQG-df-Lz9"/>
+                            <constraint firstItem="xcJ-zU-FWs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Hft-rT-Kdw"/>
+                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="xcJ-zU-FWs" secondAttribute="bottom" constant="20" id="cQG-df-Lz9"/>
                             <constraint firstAttribute="trailing" secondItem="xcJ-zU-FWs" secondAttribute="trailing" id="dJx-Yg-cG4"/>
-                            <constraint firstAttribute="trailing" secondItem="ijK-sb-xVr" secondAttribute="trailing" id="fpX-iK-ILg"/>
+                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fAA-KE-xFy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xcJ-zU-FWs" secondAttribute="trailing" constant="20" id="hXN-uJ-I9P"/>
                             <constraint firstItem="xcJ-zU-FWs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hbh-jo-ozP"/>
-                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="ijK-sb-xVr" secondAttribute="bottom" constant="-85" id="my2-UF-nXs"/>
+                            <constraint firstItem="xcJ-zU-FWs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="pbW-IJ-Le4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vk-8L-Nxd" secondAttribute="bottom" id="rcc-1k-459"/>
-                            <constraint firstItem="ijK-sb-xVr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tzw-0j-WTY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ijK-sb-xVr" secondAttribute="bottom" id="zlx-Yi-xq9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6wK-pA-VIt"/>
+                                <exclude reference="dJx-Yg-cG4"/>
+                                <exclude reference="hbh-jo-ozP"/>
+                                <exclude reference="fAA-KE-xFy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="backgroundImage" destination="ijK-sb-xVr" id="sf2-VU-fNC"/>
                         <outlet property="quoteLabel" destination="xcJ-zU-FWs" id="KxJ-F1-Omz"/>
                     </connections>
                 </viewController>
@@ -61,7 +65,4 @@
             <point key="canvasLocation" x="196" y="308"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mrrobot_1" width="2560" height="1440"/>
-    </resources>
 </document>
