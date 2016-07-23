@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,71 +17,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-8L-Nxd">
-                                <rect key="frame" x="0.0" y="395" width="600" height="204.5"/>
-                                <state key="normal" title="Random"/>
-                                <connections>
-                                    <action selector="randomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFG-vk-0Hg"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mgF-EC-nnr">
-                                <rect key="frame" x="20" y="340" width="560" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sqz-eO-a5l">
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F51-dE-hk3">
-                                        <rect key="frame" x="0.0" y="0.0" width="129" height="30"/>
-                                        <state key="normal" title="Elliot"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg8-Xr-2U4">
-                                        <rect key="frame" x="144" y="0.0" width="129" height="30"/>
-                                        <state key="normal" title="Darlene"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yda-ol-8mY">
-                                        <rect key="frame" x="288" y="0.0" width="129" height="30"/>
-                                        <state key="normal" title="Tyrell"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-oJ-JkO">
-                                        <rect key="frame" x="432" y="0.0" width="129" height="30"/>
-                                        <state key="normal" title="Mr. Robot"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcJ-zU-FWs">
+                                        <rect key="frame" x="249" y="0.0" width="63" height="62"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mgF-EC-nnr">
+                                        <rect key="frame" x="124" y="112" width="313" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F51-dE-hk3">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="90"/>
+                                                <state key="normal" title="Elliot"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg8-Xr-2U4">
+                                                <rect key="frame" x="82" y="0.0" width="67" height="90"/>
+                                                <state key="normal" title="Darlene"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yda-ol-8mY">
+                                                <rect key="frame" x="164" y="0.0" width="67" height="90"/>
+                                                <state key="normal" title="Tyrell"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-oJ-JkO">
+                                                <rect key="frame" x="246" y="0.0" width="67" height="90"/>
+                                                <state key="normal" title="Mr. Robot"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-8L-Nxd">
+                                        <rect key="frame" x="252" y="251" width="57" height="289"/>
+                                        <state key="normal" title="Random"/>
+                                        <connections>
+                                            <action selector="randomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFG-vk-0Hg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcJ-zU-FWs">
-                                <rect key="frame" x="20" y="60" width="560" height="158.5"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2Vk-8L-Nxd" secondAttribute="trailing" id="0Sw-Vz-Ojg"/>
-                            <constraint firstItem="mgF-EC-nnr" firstAttribute="top" secondItem="xcJ-zU-FWs" secondAttribute="bottom" constant="121.5" id="2cP-XC-xoa"/>
-                            <constraint firstAttribute="trailing" secondItem="mgF-EC-nnr" secondAttribute="trailing" constant="20" id="6sX-Jm-1Oy"/>
-                            <constraint firstItem="xcJ-zU-FWs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6wK-pA-VIt"/>
-                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="xcJ-zU-FWs" secondAttribute="bottom" constant="450" id="6wP-Ga-xcy"/>
-                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8OK-xv-cnr"/>
-                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="mgF-EC-nnr" secondAttribute="bottom" constant="25" id="FIg-hj-K8d"/>
-                            <constraint firstItem="xcJ-zU-FWs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Hft-rT-Kdw"/>
-                            <constraint firstItem="mgF-EC-nnr" firstAttribute="leading" secondItem="xcJ-zU-FWs" secondAttribute="trailing" constant="-480" id="NLP-C9-abC"/>
-                            <constraint firstItem="mgF-EC-nnr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="RId-in-ZRy"/>
-                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="xcJ-zU-FWs" secondAttribute="bottom" constant="176.5" id="cQG-df-Lz9"/>
-                            <constraint firstAttribute="trailing" secondItem="xcJ-zU-FWs" secondAttribute="trailing" id="dJx-Yg-cG4"/>
-                            <constraint firstItem="2Vk-8L-Nxd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fAA-KE-xFy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xcJ-zU-FWs" secondAttribute="trailing" id="hXN-uJ-I9P"/>
-                            <constraint firstItem="xcJ-zU-FWs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hbh-jo-ozP"/>
-                            <constraint firstItem="xcJ-zU-FWs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pbW-IJ-Le4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vk-8L-Nxd" secondAttribute="bottom" id="rcc-1k-459"/>
+                            <constraint firstItem="Sqz-eO-a5l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="3Uu-cM-sA4"/>
+                            <constraint firstItem="Sqz-eO-a5l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="IIq-9i-n3X"/>
+                            <constraint firstAttribute="trailing" secondItem="Sqz-eO-a5l" secondAttribute="trailing" constant="20" id="Lpf-QR-zkv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sqz-eO-a5l" secondAttribute="bottom" constant="20" id="YpV-Ou-CZ7"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="6wK-pA-VIt"/>
-                                <exclude reference="dJx-Yg-cG4"/>
-                                <exclude reference="hbh-jo-ozP"/>
-                                <exclude reference="NLP-C9-abC"/>
-                                <exclude reference="6wP-Ga-xcy"/>
-                                <exclude reference="fAA-KE-xFy"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="quoteLabel" destination="xcJ-zU-FWs" id="KxJ-F1-Omz"/>
