@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let quotes = ["We are in a war, and we are on the losing side of it.\nWe are on our knees with guns to our heads, and they are picking us off one by one.", "How do I take off a mask when it stops being a mask?\nWhen it's as much a part of me as me?"]
+    let quotes = ["We are in a war, and we are on the losing side of it.\nWe are on our knees with guns to our heads, and they are picking us off one by one.", "How do I take off a mask when it stops being a mask?\nWhen it's as much a part of me as me?", "Control is an illusion.", "Why this mask?\nIt's a bit silly, isn't it?", "In that moment, it's just you and absolute power.\nNothing else. That moment stayed with me.\nI thought I'd feel guilty for being a murderer but... I don't.\nI feel wonder.", "Corporate greed is a trickle down desire\nthat reaches even the bottom of the food chain."]
 
     @IBOutlet weak var backgroundImage: UIImageView!
     
@@ -53,6 +53,18 @@ class ViewController: UIViewController {
             case "1":
                 stringAnswer = "Elliot"
                 print("\(correctAnswers) is Elliot")
+            case "2":
+                stringAnswer = "Mr.Robot"
+                print("\(correctAnswers) is Mr.Robot")
+            case "3":
+                stringAnswer = "Tyrell"
+                print("\(correctAnswers) is Tyrell")
+            case "4":
+                stringAnswer = "Tyrell"
+                print("\(correctAnswers) is Tyrell")
+            case "5":
+                stringAnswer = "Darlene"
+                print("\(correctAnswers) is Darlene")
             default:
                 print("\(correctAnswers) that is not the answer")
             }
