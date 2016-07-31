@@ -15,12 +15,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBOutlet weak var quoteLabel: UILabel!
+    
+    @IBOutlet weak var buttonOne: UIButton!
+    @IBOutlet weak var buttonTwo: UIButton!
+    @IBOutlet weak var buttonThree: UIButton!
+    @IBOutlet weak var buttonFour: UIButton!
 
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     var correctAnswers = "0"
     var usersAnswer = "Darlene"
     var stringAnswer = "Darlene"
+    var score = 0
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +49,24 @@ class ViewController: UIViewController {
     }
     
     func setupView() {
+        //displaying score
+        scoreLabel.text = "\(score)"
+        // adds borders to buttons
+        let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
+        for button in buttons {
+            buttonBorders(button)
+        }
+        //sets quote
         quoteLabel.text = randomQuote()
+        //finding the index of the quote for the answer
         answerIndex()
+    }
+    
+    func buttonBorders(button: UIButton) {
+        button.backgroundColor = UIColor.clearColor()
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.redColor().CGColor
     }
     
     func correctAnswer() {
@@ -54,8 +78,8 @@ class ViewController: UIViewController {
                 stringAnswer = "Elliot"
                 print("\(correctAnswers) is Elliot")
             case "2":
-                stringAnswer = "Mr.Robot"
-                print("\(correctAnswers) is Mr.Robot")
+                stringAnswer = "Mr. Robot"
+                print("\(correctAnswers) is Mr. Robot")
             case "3":
                 stringAnswer = "Tyrell"
                 print("\(correctAnswers) is Tyrell")
@@ -75,9 +99,11 @@ class ViewController: UIViewController {
     
     func comparingAnswers(){
         if usersAnswer == stringAnswer {
+            self.score += 1
             let alertController = UIAlertController(title: "Correct", message: "You're freaking awesome!", preferredStyle: .Alert)
             
             let cancelAction = UIAlertAction(title: "Next", style: .Cancel) { (action) in
+                print("This is the score \(self.score)")
                 self.setupView()
                 self.answerIndex()
             }
@@ -112,9 +138,6 @@ class ViewController: UIViewController {
         print(answerIndex)
     }
 
-    @IBAction func randomBtn(sender: AnyObject) {
-       setupView()
-    }
     
     @IBAction func buttonOne(sender: AnyObject) {
         print(sender.currentTitle!!)
