@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     
     func setupView() {
         //displaying score
-        scoreLabel.text = "\(score)"
+        scoreLabel.text = "Your Score Is Currently: \(score)"
         // adds borders to buttons
         let buttons = [buttonOne, buttonTwo, buttonThree, buttonFour]
         for button in buttons {
