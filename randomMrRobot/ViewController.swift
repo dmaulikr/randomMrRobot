@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.clearColor()
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.redColor().CGColor
+        button.layer.borderColor = UIColor(red:0.83, green:0.13, blue:0.15, alpha:1.0).CGColor
     }
     
     func correctAnswer() {
