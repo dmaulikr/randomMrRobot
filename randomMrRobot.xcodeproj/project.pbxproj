@@ -15,6 +15,7 @@
 		C6C83BB81D3EE7B0003D1395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C83BB61D3EE7B0003D1395 /* LaunchScreen.storyboard */; };
 		C6C83BC31D3EE7B0003D1395 /* randomMrRobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C83BC21D3EE7B0003D1395 /* randomMrRobotTests.swift */; };
 		C6C83BCE1D3EE7B0003D1395 /* randomMrRobotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C83BCD1D3EE7B0003D1395 /* randomMrRobotUITests.swift */; };
+		C6D9FC241D51A42E00F144E5 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D9FC231D51A42E00F144E5 /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C6C83BC91D3EE7B0003D1395 /* randomMrRobotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = randomMrRobotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C83BCD1D3EE7B0003D1395 /* randomMrRobotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomMrRobotUITests.swift; sourceTree = "<group>"; };
 		C6C83BCF1D3EE7B0003D1395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D9FC231D51A42E00F144E5 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C6C83BB61D3EE7B0003D1395 /* LaunchScreen.storyboard */,
 				C6C83BB91D3EE7B0003D1395 /* Info.plist */,
 				C6C83BB11D3EE7B0003D1395 /* randomMrRobot.xcdatamodeld */,
+				C6D9FC231D51A42E00F144E5 /* ModalViewController.swift */,
 			);
 			path = randomMrRobot;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6D9FC241D51A42E00F144E5 /* ModalViewController.swift in Sources */,
 				C6C83BB31D3EE7B0003D1395 /* randomMrRobot.xcdatamodeld in Sources */,
 				C6C83BAD1D3EE7B0003D1395 /* ViewController.swift in Sources */,
 				C6C83BAB1D3EE7B0003D1395 /* AppDelegate.swift in Sources */,
@@ -488,6 +492,7 @@
 				C6C83BD41D3EE7B0003D1395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6C83BD51D3EE7B0003D1395 /* Build configuration list for PBXNativeTarget "randomMrRobotTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				C6C83BD71D3EE7B0003D1395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6C83BD81D3EE7B0003D1395 /* Build configuration list for PBXNativeTarget "randomMrRobotUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				C6C83BDA1D3EE7B0003D1395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

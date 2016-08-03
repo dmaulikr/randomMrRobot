@@ -108,6 +108,7 @@ class ViewController: UIViewController {
                 self.answerIndex()
             }
             alertController.addAction(cancelAction)
+          
             
             
             self.presentViewController(alertController, animated: true) {
@@ -138,6 +139,9 @@ class ViewController: UIViewController {
         print(answerIndex)
     }
 
+    func cancel(){
+        
+    }
     
     @IBAction func buttonOne(sender: AnyObject) {
         print(sender.currentTitle!!)

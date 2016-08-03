@@ -123,11 +123,54 @@
                         <outlet property="buttonTwo" destination="Tg8-Xr-2U4" id="JxC-cK-WNN"/>
                         <outlet property="quoteLabel" destination="xcJ-zU-FWs" id="KxJ-F1-Omz"/>
                         <outlet property="scoreLabel" destination="Tfy-Ri-5By" id="07h-fI-9f8"/>
+                        <segue destination="9uW-sC-vmj" kind="presentation" id="AAf-lw-fap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="308"/>
+            <point key="canvasLocation" x="211" y="308"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="o9P-s8-6gi">
+            <objects>
+                <viewController id="9uW-sC-vmj" customClass="ModalViewController" customModule="randomMrRobot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eVn-no-7KI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ATj-KW-Vjc"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="jsJ-2p-GDR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khL-Pj-vL6">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIn-nH-dGu">
+                                        <rect key="frame" x="50" y="50" width="140" height="28"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" constant="50" id="ADw-ir-afZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="HIn-nH-dGu" secondAttribute="bottom" constant="50" id="HWn-AT-YMv"/>
+                                    <constraint firstAttribute="trailing" secondItem="HIn-nH-dGu" secondAttribute="trailing" constant="50" id="RVg-Zs-kqu"/>
+                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="top" constant="50" id="y9l-dg-IOv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81565656565656564" green="0.07880787693541734" blue="0.1014685062648911" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="khL-Pj-vL6" secondAttribute="trailing" constant="180" id="DT9-3j-qDH"/>
+                            <constraint firstItem="khL-Pj-vL6" firstAttribute="leading" secondItem="jsJ-2p-GDR" secondAttribute="leading" constant="180" id="JHg-c2-Icn"/>
+                            <constraint firstItem="ATj-KW-Vjc" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="bottom" constant="236" id="asn-gU-5bF"/>
+                            <constraint firstItem="khL-Pj-vL6" firstAttribute="top" secondItem="eVn-no-7KI" secondAttribute="bottom" constant="216" id="gbd-7x-BxQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PS0-B8-fTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="308"/>
         </scene>
     </scenes>
     <resources>
