@@ -103,12 +103,12 @@
 			children = (
 				C6C83BAA1D3EE7B0003D1395 /* AppDelegate.swift */,
 				C6C83BAC1D3EE7B0003D1395 /* ViewController.swift */,
+				C6D9FC231D51A42E00F144E5 /* ModalViewController.swift */,
 				C6C83BAE1D3EE7B0003D1395 /* Main.storyboard */,
 				C6C83BB41D3EE7B0003D1395 /* Assets.xcassets */,
 				C6C83BB61D3EE7B0003D1395 /* LaunchScreen.storyboard */,
 				C6C83BB91D3EE7B0003D1395 /* Info.plist */,
 				C6C83BB11D3EE7B0003D1395 /* randomMrRobot.xcdatamodeld */,
-				C6D9FC231D51A42E00F144E5 /* ModalViewController.swift */,
 			);
 			path = randomMrRobot;
 			sourceTree = "<group>";

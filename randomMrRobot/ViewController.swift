@@ -100,37 +100,41 @@ class ViewController: UIViewController {
     func comparingAnswers(){
         if usersAnswer == stringAnswer {
             self.score += 1
-            let alertController = UIAlertController(title: "Correct", message: "You're freaking awesome!", preferredStyle: .Alert)
-            
-            let cancelAction = UIAlertAction(title: "Next", style: .Cancel) { (action) in
-                print("This is the score \(self.score)")
-                self.setupView()
-                self.answerIndex()
-            }
-            alertController.addAction(cancelAction)
-          
-            
-            
-            self.presentViewController(alertController, animated: true) {
-                // ...
-            }
-
+            self.performSegueWithIdentifier("answerSegue", sender: nil)
+//            
+//            let alertController = UIAlertController(title: "Correct", message: "You're freaking awesome!", preferredStyle: .Alert)
+//            
+//            let cancelAction = UIAlertAction(title: "Next", style: .Cancel) { (action) in
+//                print("This is the score \(self.score)")
+//                self.setupView()
+//                self.answerIndex()
+//            }
+//            alertController.addAction(cancelAction)
+//          
+//            
+//            
+//            self.presentViewController(alertController, animated: true) {
+//                // ...
+//            }
+//
             print("YOU ARE CORRECT! :)")
         } else {
+            self.performSegueWithIdentifier("answerSegue", sender: nil)
+//
             print("Try Again :(")
             
-            let alertController = UIAlertController(title: "Incorrect", message: "Better luck next time, buddy!", preferredStyle: .Alert)
-            
-            let cancelAction = UIAlertAction(title: "Next", style: .Cancel) { (action) in
-                self.setupView()
-                self.answerIndex()
-            }
-            alertController.addAction(cancelAction)
-            
-      
-            self.presentViewController(alertController, animated: true) {
-                // ...
-            }
+//            let alertController = UIAlertController(title: "Incorrect", message: "Better luck next time, buddy!", preferredStyle: .Alert)
+//            
+//            let cancelAction = UIAlertAction(title: "Next", style: .Cancel) { (action) in
+//                self.setupView()
+//                self.answerIndex()
+//            }
+//            alertController.addAction(cancelAction)
+//            
+//      
+//            self.presentViewController(alertController, animated: true) {
+//                // ...
+//            }
         }
     }
     func answerIndex() {
@@ -139,10 +143,8 @@ class ViewController: UIViewController {
         print(answerIndex)
     }
 
-    func cancel(){
-        
-    }
-    
+
+
     @IBAction func buttonOne(sender: AnyObject) {
         print(sender.currentTitle!!)
         usersAnswer = sender.currentTitle!!

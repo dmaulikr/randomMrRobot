@@ -80,7 +80,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcJ-zU-FWs">
-                                        <rect key="frame" x="5" y="208.5" width="590" height="23.5"/>
+                                        <rect key="frame" x="5" y="208" width="590" height="23.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <color key="textColor" red="0.82745098039999998" green="0.12549019610000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,7 +123,7 @@
                         <outlet property="buttonTwo" destination="Tg8-Xr-2U4" id="JxC-cK-WNN"/>
                         <outlet property="quoteLabel" destination="xcJ-zU-FWs" id="KxJ-F1-Omz"/>
                         <outlet property="scoreLabel" destination="Tfy-Ri-5By" id="07h-fI-9f8"/>
-                        <segue destination="9uW-sC-vmj" kind="presentation" id="AAf-lw-fap"/>
+                        <segue destination="9uW-sC-vmj" kind="presentation" identifier="answerSegue" id="mJb-30-h4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,16 +138,19 @@
                         <viewControllerLayoutGuide type="top" id="eVn-no-7KI"/>
                         <viewControllerLayoutGuide type="bottom" id="ATj-KW-Vjc"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="jsJ-2p-GDR">
+                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="jsJ-2p-GDR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khL-Pj-vL6">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khL-Pj-vL6" userLabel="Modal View">
+                                <rect key="frame" x="226" y="235" width="148" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIn-nH-dGu">
-                                        <rect key="frame" x="50" y="50" width="140" height="28"/>
+                                        <rect key="frame" x="50" y="50" width="48" height="30"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="9uW-sC-vmj" eventType="touchUpInside" id="Nbk-cZ-y5Z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,12 +162,10 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.81565656565656564" green="0.07880787693541734" blue="0.1014685062648911" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="khL-Pj-vL6" secondAttribute="trailing" constant="180" id="DT9-3j-qDH"/>
-                            <constraint firstItem="khL-Pj-vL6" firstAttribute="leading" secondItem="jsJ-2p-GDR" secondAttribute="leading" constant="180" id="JHg-c2-Icn"/>
-                            <constraint firstItem="ATj-KW-Vjc" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="bottom" constant="236" id="asn-gU-5bF"/>
-                            <constraint firstItem="khL-Pj-vL6" firstAttribute="top" secondItem="eVn-no-7KI" secondAttribute="bottom" constant="216" id="gbd-7x-BxQ"/>
+                            <constraint firstItem="khL-Pj-vL6" firstAttribute="centerX" secondItem="jsJ-2p-GDR" secondAttribute="centerX" id="YZ0-C0-wAY"/>
+                            <constraint firstItem="khL-Pj-vL6" firstAttribute="centerY" secondItem="jsJ-2p-GDR" secondAttribute="centerY" id="caZ-Ue-XY7"/>
                         </constraints>
                     </view>
                 </viewController>
