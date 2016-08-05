@@ -9,10 +9,13 @@
 import UIKit
 
 class ModalViewController: UIViewController {
+    
+    @IBOutlet weak var usersAnswerLabel: UILabel!
+    var usersAnswer: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        usersAnswerLabel.text = usersAnswer
         // Do any additional setup after loading the view.
     }
 

@@ -168,4 +168,10 @@ class ViewController: UIViewController {
         usersAnswer = sender.currentTitle!!
         correctAnswer()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let secondVC: ModalViewController = segue.destinationViewController as! ModalViewController
+        
+        secondVC.usersAnswer = "\(score)"
+    }
 }

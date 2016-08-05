@@ -143,10 +143,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khL-Pj-vL6" userLabel="Modal View">
-                                <rect key="frame" x="226" y="235" width="148" height="130"/>
+                                <rect key="frame" x="50" y="170" width="500" height="280"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKu-Gx-Jeh">
+                                        <rect key="frame" x="0.0" y="68" width="500" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.8156565657" green="0.078807876939999993" blue="0.1014685063" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIn-nH-dGu">
-                                        <rect key="frame" x="50" y="50" width="48" height="30"/>
+                                        <rect key="frame" x="112" y="225" width="275" height="30"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="cancel:" destination="9uW-sC-vmj" eventType="touchUpInside" id="Nbk-cZ-y5Z"/>
@@ -155,19 +161,26 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" constant="50" id="ADw-ir-afZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="HIn-nH-dGu" secondAttribute="bottom" constant="50" id="HWn-AT-YMv"/>
-                                    <constraint firstAttribute="trailing" secondItem="HIn-nH-dGu" secondAttribute="trailing" constant="50" id="RVg-Zs-kqu"/>
-                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="top" constant="50" id="y9l-dg-IOv"/>
+                                    <constraint firstAttribute="bottom" secondItem="HIn-nH-dGu" secondAttribute="bottom" constant="25" id="4Qk-Xf-9eo"/>
+                                    <constraint firstAttribute="trailing" secondItem="HIn-nH-dGu" secondAttribute="trailing" constant="113" id="7wM-9e-kQC"/>
+                                    <constraint firstItem="fKu-Gx-Jeh" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" id="iJ6-48-2nd"/>
+                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" constant="112" id="ikc-sm-RDo"/>
+                                    <constraint firstAttribute="trailing" secondItem="fKu-Gx-Jeh" secondAttribute="trailing" id="j0J-Zg-HKN"/>
+                                    <constraint firstItem="fKu-Gx-Jeh" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="top" constant="68" id="ya0-pr-tee"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="khL-Pj-vL6" firstAttribute="centerX" secondItem="jsJ-2p-GDR" secondAttribute="centerX" id="YZ0-C0-wAY"/>
-                            <constraint firstItem="khL-Pj-vL6" firstAttribute="centerY" secondItem="jsJ-2p-GDR" secondAttribute="centerY" id="caZ-Ue-XY7"/>
+                            <constraint firstItem="khL-Pj-vL6" firstAttribute="top" secondItem="eVn-no-7KI" secondAttribute="bottom" constant="150" id="4YK-gE-uzv"/>
+                            <constraint firstItem="ATj-KW-Vjc" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="bottom" constant="150" id="Hog-kd-qhz"/>
+                            <constraint firstItem="khL-Pj-vL6" firstAttribute="leading" secondItem="jsJ-2p-GDR" secondAttribute="leading" constant="50" id="Tsn-Ey-4Sl"/>
+                            <constraint firstAttribute="trailing" secondItem="khL-Pj-vL6" secondAttribute="trailing" constant="50" id="cUQ-GO-jaz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usersAnswerLabel" destination="fKu-Gx-Jeh" id="RWW-GI-dix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PS0-B8-fTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
