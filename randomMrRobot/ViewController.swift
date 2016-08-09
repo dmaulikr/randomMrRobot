@@ -67,9 +67,11 @@ class ViewController: UIViewController {
     
     
     func randomQuote() -> String {
-        let offset = Int(arc4random_uniform(UInt32(quotes.count)))
-        let idx = (quotes.startIndex.advancedBy(offset))
-        return quotes[idx]
+        let index: Int = Int(arc4random_uniform(UInt32(quotes.count)))
+        let value = Array(quotes.values)[index]
+        let key = Array(quotes.keys)[index]
+        let combined = quotes[key]
+        return combined!
     }
     
     func setupView() {
@@ -139,9 +141,9 @@ class ViewController: UIViewController {
         }
     }
     func answerIndex() {
-        let answerIndex = quotes.indexOf(quoteLabel.text!)!
-        correctAnswers = "\(answerIndex)"
-        print(answerIndex)
+//        let answerIndex = quotes.indexOf(quoteLabel.text!)!
+//        correctAnswers = "\(answerIndex)"
+//        print(answerIndex)
     }
 
 
