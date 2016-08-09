@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -151,9 +152,17 @@
                                         <color key="textColor" red="0.8156565657" green="0.078807876939999993" blue="0.1014685063" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="021-QA-DS1">
+                                        <rect key="frame" x="0.0" y="137" width="500" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIn-nH-dGu">
-                                        <rect key="frame" x="112" y="225" width="275" height="30"/>
-                                        <state key="normal" title="Cancel"/>
+                                        <rect key="frame" x="0.0" y="224" width="500" height="30.5"/>
+                                        <state key="normal" title="Next -&gt;">
+                                            <color key="titleColor" red="0.8156565657" green="0.078807876939999993" blue="0.1014685063" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="cancel:" destination="9uW-sC-vmj" eventType="touchUpInside" id="Nbk-cZ-y5Z"/>
                                         </connections>
@@ -162,10 +171,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="HIn-nH-dGu" secondAttribute="bottom" constant="25" id="4Qk-Xf-9eo"/>
-                                    <constraint firstAttribute="trailing" secondItem="HIn-nH-dGu" secondAttribute="trailing" constant="113" id="7wM-9e-kQC"/>
+                                    <constraint firstItem="021-QA-DS1" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" id="El7-8M-Ocg"/>
+                                    <constraint firstItem="021-QA-DS1" firstAttribute="top" secondItem="fKu-Gx-Jeh" secondAttribute="bottom" constant="48.5" id="L2b-vg-bDa"/>
+                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" id="SyY-Tb-r6N"/>
                                     <constraint firstItem="fKu-Gx-Jeh" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" id="iJ6-48-2nd"/>
-                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="leading" secondItem="khL-Pj-vL6" secondAttribute="leading" constant="112" id="ikc-sm-RDo"/>
                                     <constraint firstAttribute="trailing" secondItem="fKu-Gx-Jeh" secondAttribute="trailing" id="j0J-Zg-HKN"/>
+                                    <constraint firstItem="HIn-nH-dGu" firstAttribute="top" secondItem="021-QA-DS1" secondAttribute="bottom" constant="67" id="qyS-8H-oic"/>
+                                    <constraint firstAttribute="trailing" secondItem="021-QA-DS1" secondAttribute="trailing" id="yU4-bS-dLn"/>
                                     <constraint firstItem="fKu-Gx-Jeh" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="top" constant="68" id="ya0-pr-tee"/>
                                 </constraints>
                             </view>
@@ -176,9 +188,11 @@
                             <constraint firstItem="ATj-KW-Vjc" firstAttribute="top" secondItem="khL-Pj-vL6" secondAttribute="bottom" constant="150" id="Hog-kd-qhz"/>
                             <constraint firstItem="khL-Pj-vL6" firstAttribute="leading" secondItem="jsJ-2p-GDR" secondAttribute="leading" constant="50" id="Tsn-Ey-4Sl"/>
                             <constraint firstAttribute="trailing" secondItem="khL-Pj-vL6" secondAttribute="trailing" constant="50" id="cUQ-GO-jaz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HIn-nH-dGu" secondAttribute="trailing" constant="30" id="swP-mY-n3E"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="scoreLabel" destination="021-QA-DS1" id="MCE-8O-UMp"/>
                         <outlet property="usersAnswerLabel" destination="fKu-Gx-Jeh" id="RWW-GI-dix"/>
                     </connections>
                 </viewController>
