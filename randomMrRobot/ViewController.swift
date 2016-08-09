@@ -69,9 +69,13 @@ class ViewController: UIViewController {
     func randomQuote() -> String {
         let index: Int = Int(arc4random_uniform(UInt32(quotes.count)))
         let value = Array(quotes.values)[index]
+        print("This is the value \(value)")
         let key = Array(quotes.keys)[index]
-        let combined = quotes[key]
-        return combined!
+        print("This is the key \(key)")
+        
+        correctAnswers = key
+      
+        return value
     }
     
     func setupView() {
@@ -97,24 +101,33 @@ class ViewController: UIViewController {
     
     func correctAnswer() {
             switch correctAnswers {
-            case "0":
+            case "Darlene_1", "Darlene_2", "Darlene_3":
                 stringAnswer = "Darlene"
                 print("\(correctAnswers) is Darlene")
-            case "1":
+            case "Elliot_1", "Elliot_2", "Elliot_3", "Elliot_4", "Elliot_5", "Elliot_6":
                 stringAnswer = "Elliot"
                 print("\(correctAnswers) is Elliot")
-            case "2":
+            case "MrRobot_1", "MrRobot_2", "MrRobot_3", "MrRobot_4":
                 stringAnswer = "Mr. Robot"
                 print("\(correctAnswers) is Mr. Robot")
-            case "3":
+            case "Tyrell_1", "Tyrell_2", "Tyrell_3":
                 stringAnswer = "Tyrell"
                 print("\(correctAnswers) is Tyrell")
-            case "4":
-                stringAnswer = "Tyrell"
-                print("\(correctAnswers) is Tyrell")
-            case "5":
-                stringAnswer = "Darlene"
-                print("\(correctAnswers) is Darlene")
+            case "Ray_1":
+                stringAnswer = "Ray"
+                print("\(correctAnswers) is Ray")
+            case "Dom_1":
+                stringAnswer = "Dom"
+                print("\(correctAnswers) is Dom")
+            case "Krista_1":
+                stringAnswer = "Krista"
+                print("\(correctAnswers) is Krista")
+            case "Angela_1":
+                stringAnswer = "Angela"
+                print("\(correctAnswers) is Angela")
+            case "Joanna_1":
+                stringAnswer = "Joanna"
+                print("\(correctAnswers) is Joanna")
             default:
                 print("\(correctAnswers) that is not the answer")
             }
